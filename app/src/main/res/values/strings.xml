@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Vogo Image</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="error_time_out">Connection to server timed out. Please try again later.</string>
+
+    <string name="tab_1">Layout</string>
+    <string name="tab_2">Gradle</string>
+    <string name="tab_3">Activity</string>
+    <string name="tab_4">Fragment</string>
+    <string name="tab_5">Permission</string>
+    <string name="todo">TODO</string>
+
+    <string name="error_permission">Permission is denied</string>
+    <string name="dialog_pick">Effort Improve Android Skill</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_retry">Retry</string>
+
+    <string name="TAG_FRAGMENT_LINEAR">Linear</string>
+    <string name="TAG_FRAGMENT_RELATIVE">Relative</string>
+    <string name="TAG_FRAGMENT_CONSTRAINT">Constraint</string>
+    <string name="TAG_FRAGMENT_COORDINATE">Coordinate</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.linroid.filtermenu.library.FilterMenuLayout
+        android:id="@+id/filter_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        app:fm_centerBottom="50dp"
+        app:fm_centerRight="50dp"
+        app:fm_collapsedRadius="24dp"
+        app:fm_expandedRadius="96dp"
+        app:fm_primaryColor="#003b82"
+        app:fm_primaryDarkColor="#FF032956"
+        tools:ignore="UnusedAttribute" />
+
+</FrameLayout>

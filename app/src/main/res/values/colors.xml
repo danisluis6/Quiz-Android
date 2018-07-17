@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003b82</color>
+    <color name="colorPrimaryDark">#003b82</color>
+
+    <color name="home_statusbar_color">#003b82</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- layout theme android -->
+    <color name="relative_status">#C2185B</color>
+    <color name="relative_bg">#E91E63</color>
+</resources>

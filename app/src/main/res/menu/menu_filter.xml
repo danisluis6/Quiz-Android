@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_share"
+        android:title="@string/todo"
+        android:icon="@drawable/ic_share"/>
+    <item
+        android:id="@+id/ic_speaker"
+        android:title="@string/todo"
+        android:icon="@drawable/ic_speaker"/>
+    <item
+        android:id="@+id/ic_silent"
+        android:title="@string/todo"
+        android:icon="@drawable/ic_silent"/>
+
+    <item
+        android:id="@+id/ic_exit"
+        android:title="@string/todo"
+        android:icon="@drawable/ic_exit"/>
+
+</menu>

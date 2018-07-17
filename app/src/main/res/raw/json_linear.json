@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 2,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 3,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 4,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 5,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 6,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  },
+  {
+    "id": 7,
+    "question": "How to center a textview inside a Linearlayout?",
+    "a": "android:gravity=\"center\"",
+    "b": "android:gravity=\"center\"",
+    "c": "android:gravity=\"center\"",
+    "d": "android:gravity=\"center\"",
+    "x": "a"
+  }
+]
