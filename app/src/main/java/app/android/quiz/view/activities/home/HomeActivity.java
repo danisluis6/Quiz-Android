@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import javax.inject.Inject;
 
@@ -76,17 +73,17 @@ public class HomeActivity extends BaseActivity implements HomeView {
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                // TODO
             }
 
             @Override
             public void onPageSelected(int position) {
-                Toast.makeText(mContext, "Index "+position, Toast.LENGTH_SHORT).show();
+                // TODO
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                // TODO
             }
         });
     }

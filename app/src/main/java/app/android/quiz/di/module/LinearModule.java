@@ -2,6 +2,9 @@ package app.android.quiz.di.module;
 
 import android.content.Context;
 
+import java.util.ArrayList;
+
+import app.android.quiz.data.storage.database.entities.Linear;
 import app.android.quiz.di.scope.FragmentScope;
 import app.android.quiz.service.JsonData;
 import app.android.quiz.view.activities.home.HomeActivity;
@@ -10,6 +13,7 @@ import app.android.quiz.view.fragments.linear.LinearModel;
 import app.android.quiz.view.fragments.linear.LinearPresenter;
 import app.android.quiz.view.fragments.linear.LinearPresenterImpl;
 import app.android.quiz.view.fragments.linear.LinearView;
+import app.android.quiz.view.fragments.linear.adapter.LinearAdapter;
 import dagger.Module;
 import dagger.Provides;
 
@@ -37,5 +41,11 @@ public class LinearModule {
     @FragmentScope
     LinearPresenter provideLinearPresenter(Context context, HomeActivity activity, LinearModel homeModel, JsonData jsonData) {
         return new LinearPresenterImpl(context, activity, mView, homeModel, jsonData);
+    }
+
+    @Provides
+    @FragmentScope
+    LinearAdapter provideLinearAdapter(Context context) {
+        return new LinearAdapter(context, mFragment, new ArrayList<Linear>());
     }
 }

@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import app.android.quiz.R;
 import app.android.quiz.view.activities.home.fragment.layout.FragmentLayout;
-import app.android.quiz.view.activities.home.loading.FragmentLoading;
 
 /**
  * Created by vuongluis on 4/14/2018.
@@ -32,25 +31,13 @@ public class PaperAdapter extends FragmentStatePagerAdapter {
             case 0: {
                 return mFragmentLayout;
             }
-            case 1: {
-                return new FragmentLoading();
-            }
-            case 2: {
-                return new FragmentLoading();
-            }
-            case 3: {
-                return new FragmentLoading();
-            }
-            case 4: {
-                return new FragmentLoading();
-            }
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return 1;
     }
 
     @Override
@@ -58,14 +45,6 @@ public class PaperAdapter extends FragmentStatePagerAdapter {
         switch (position) {
             case 0:
                 return mContext.getResources().getString(R.string.tab_1);
-            case 1:
-                return mContext.getResources().getString(R.string.tab_2);
-            case 2:
-                return mContext.getResources().getString(R.string.tab_3);
-            case 3:
-                return mContext.getResources().getString(R.string.tab_4);
-            case 4:
-                return mContext.getResources().getString(R.string.tab_5);
             default:
                 return null;
         }

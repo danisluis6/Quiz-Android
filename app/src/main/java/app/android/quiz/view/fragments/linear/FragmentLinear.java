@@ -1,8 +1,14 @@
 package app.android.quiz.view.fragments.linear;
 
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,14 +27,9 @@ import app.android.quiz.view.activities.home.HomeActivity;
 import app.android.quiz.view.activities.home.fragment.layout.FragmentLayout;
 import app.android.quiz.view.activities.home.loading.FragmentLoading;
 import app.android.quiz.view.fragments.BaseFragment;
+import app.android.quiz.view.fragments.linear.adapter.LinearAdapter;
 import butterknife.BindView;
-import io.github.kbiakov.codeview.CodeView;
-import io.github.kbiakov.codeview.adapters.Options;
-import io.github.kbiakov.codeview.highlight.ColorTheme;
-import io.github.kbiakov.codeview.highlight.Font;
 import io.reactivex.disposables.Disposable;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function1;
 
 /**
  * Created by vuongluis on 4/14/2018.
@@ -40,6 +41,12 @@ import kotlin.jvm.functions.Function1;
 public class FragmentLinear extends BaseFragment implements LinearView {
 
     @Inject
+    Context mContext;
+
+    @Inject
+    HomeActivity mHomeActivity;
+
+    @Inject
     FragmentLoading mFragmentLoading;
 
     @Inject
@@ -48,8 +55,11 @@ public class FragmentLinear extends BaseFragment implements LinearView {
     @Inject
     HomeActivity mActivity;
 
-    @BindView(R.id.codeView)
-    CodeView mCodeView;
+    @Inject
+    LinearAdapter mLinearAdapter;
+
+    @BindView(R.id.rcvLinears)
+    RecyclerView rcvLinears;
 
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
@@ -78,14 +88,20 @@ public class FragmentLinear extends BaseFragment implements LinearView {
         View view = inflater.inflate(R.layout.fragment_linear, container, false);
         distributedDaggerComponents();
         bindView(view);
+
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
+        rcvLinears.setLayoutManager(mLayoutManager);
+        rcvLinears.setItemAnimator(new DefaultItemAnimator());
+        rcvLinears.setAdapter(mLinearAdapter);
         callAPI();
         return view;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onResume() {
         super.onResume();
-        if (mDisposable.isDisposed()) {
+        if (mHomeActivity.isInMultiWindowMode() || mDisposable.isDisposed()) {
             while (getChildFragmentManager().getBackStackEntryCount() > 0) {
                 mFragmentManager.popBackStackImmediate();
             }
@@ -118,18 +134,7 @@ public class FragmentLinear extends BaseFragment implements LinearView {
                 mFragmentManager.popBackStackImmediate();
             }
         }
-
-        mCodeView.setCode(items.get(0).getA());
-        mCodeView.updateOptions(new Function1<Options, Unit>() {
-            @Override
-            public Unit invoke(Options options) {
-                options.withFont(Font.Consolas)
-                        .withTheme(ColorTheme.SOLARIZED_LIGHT)
-                        .withShadows()
-                        .setShortcut(false);
-                return null;
-            }
-        });
+        mLinearAdapter.updateLinears(items);
     }
 
     @Override

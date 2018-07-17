@@ -6,10 +6,15 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <io.github.kbiakov.codeview.CodeView
-        android:id="@+id/codeView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:animateOnStart="true" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvLinears"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </FrameLayout>
